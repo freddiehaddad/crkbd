@@ -1,67 +1,75 @@
-# Quantum Mechanical Keyboard Firmware
+# Corne Keyboard – Custom QMK Keymap
 
-[docs](https://docs.qmk.fm)
-[repo](https://github.com/qmk/qmk_firmware)
-[tool](https://config.qmk.fm/#/crkbd/rev1/LAYOUT_split_3x6_3)
-
-## Layout
-
-Custom Overrides
-
-```text
-key     | shift + key
---------+-------------
-KC_PIPE | KC_QUES
-KC_BKSP | KC_DEL
-```
-
-Keyboard Layout
+This repository contains my custom QMK keymap for the Corne (crkbd) split
+keyboard. It includes advanced features like Key Overrides, Combos, and RGB
+Matrix controls for a highly ergonomic and customizable experience.
 
 ![layout](./images/layout.png)
 
-## Installation
+## Features Overview
+
+- Key Overrides
+  - Shift + | → ?
+  - Shift + Backspace → Delete
+- Win Lock Combo
+  - Press Lower + Raise + Esc to toggle Windows/GUI keys globally (great for
+    gaming).
+- RGB Matrix Controls
+  - Layer 3 provides RGB toggle, speed, hue, saturation, and brightness
+    adjustments.
+- Layer Layouts
+  - Base: QWERTY
+  - Layer 1: Symbols
+  - Layer 2: Numbers + Navigation
+  - Layer 3: RGB + Function keys
+
+## Layers Overview
+
+| Layer | Description           |
+|-------|-----------------------|
+| 0     | Base QWERTY           |
+| 1     | Symbols (punctuation) |
+| 2     | Numbers + Navigation  |
+| 3     | RGB Matrix + Function |
+
+## Installation & Build
+
+1. Clone QMK Firmware
+1. Clone This Keymap
+
+Place this repo under:
 
 ```text
-echo "PATH=$PATH:$HOME/.local/bin" >> $HOME/.zshrc
-python3 -m pip install --user qmk
+<qmk repo root>/keyboards/crkbd/keymaps/freddiehaddad
 ```
 
-## New Configuration
+## Configure QMK
 
-```text
-qmk setup -H $HOME/projects/git/qmk_firmware freddiehaddad/qmk_firmware
-qmk new-keymap --keyboard crkbd --keymap freddiehaddad
+```console
 qmk config user.keyboard=crkbd
 qmk config user.keymap=freddiehaddad
-```
-
-## Existing Configuration
-
-```text
-qmk setup -H $HOME/projects/git/qmk_firmware freddiehaddad/qmk_firmware
-qmk config user.keyboard=crkbd
-qmk config user.keymap=freddiehaddad
-```
-
-## Flashing
-
-```text
 qmk compile --clean
 qmk flash --bootloader dfu
 ```
 
-## Miscellaneous
+> **NOTE**: If initial flash fails:
+>
+> See: [Github Issue](https://github.com/qmk/qmk_firmware/issues/22050#issuecomment-1722308968)
+>
+> ```console
+> dfu-programmer atmega32u4 erase --force
+> ```
 
-### Initial Flash
-
-See: [Github Issue](https://github.com/qmk/qmk_firmware/issues/22050#issuecomment-1722308968)
-
-```text
- dfu-programmer atmega32u4 erase --force
-```
-
-### Generate keymap.json
+## Generate keymap.json
 
 ```text
-qmk c2json --keyboard crkbd --keymap freddiehaddad --output keymap.json keymap.c
+qmk c2json --keyboard crkbd/rev1 --keymap freddiehaddad --output keymap.json keymap.c
 ```
+
+## References
+
+- [QMK Docs](https://docs.qmk.fm/)
+- [RGB Matrix](https://docs.qmk.fm/features/rgb_matrix)
+- [Combos](https://docs.qmk.fm/features/combo)
+- [Key Overrides](https://docs.qmk.fm/features/key_overrides)
+- [QMK Configurator](https://config.qmk.fm/#/crkbd/rev1/LAYOUT_split_3x6_3)
