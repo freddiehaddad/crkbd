@@ -1,10 +1,42 @@
 # Corne Keyboard – Custom QMK Keymap
 
-This repository contains my custom QMK keymap for the Corne (crkbd) split
-keyboard. It includes advanced features like Key Overrides, Combos, and RGB
-Matrix controls for a highly ergonomic and customizable experience.
+This repository contains my custom QMK keymap for the Corne (crkbd) split keyboard. It includes advanced features like Key Overrides, Combos, and RGB Matrix controls for a highly ergonomic and customizable experience.
 
-![layout](./images/layout.png)
+Layer 0: Shift + BS => Delete, Shift + | => ?
+
+|    |    |    |    |    |    |    |    |    |    |    |    |    |
+|----|----|----|----|----|----|----|----|----|----|----|----|----|
+|Tab | Q  | W  | E  | R  | T  |    | Y  | U  | I  | O  | P  |BS D|
+|Ctrl| A  | S  | D  | F  | G  |    | H  | J  | K  | L  |; : |' " |
+|Alt | Z  | X  | C  |V   | B  |    | N  | M  |, < |. > |\| ?|Esc |
+|    |    |    |Meta|Low |Sp  |    |Ent |Rai |Shft|    |    |    |
+
+Layer 1
+
+|    |    |    |    |    |    |    |    |    |    |    |    |    |
+|----|----|----|----|----|----|----|----|----|----|----|----|----|
+| *  | !  | @  | #  | $  | %  |    | ^  | &  | *  |    |    |    |
+|Ctrl| <  | (  | [  | {  | \\ |    | /  | }  | ]  | )  | >  | `  |
+|Alt |    |    |    |    |    |    | _  | -  | +  | =  |    | ~  |
+|    |    |    |Meta|Low |Sp  |    |Ent |Rai |Shft|    |    |    |
+
+Layer 2: CSp => Tmux Prefix Ctrl+Space
+
+|    |    |    |    |    |    |    |    |    |    |    |    |    |
+|----|----|----|----|----|----|----|----|----|----|----|----|----|
+|Tab | 1  | 2  | 3  | 4  | 5  |    | 6  | 7  | 8  | 9  | 0  |    |
+|Ctl |    |    |    |    |CSp |    |Lt  |Dn  |Up  |Rt  |    |    |
+|Alt |    |    |    |    |    |    |Hm  |PDn |PUp |End |    |    |
+|    |    |    |Meta|Low |Sp  |    |Ent |Rai |Shft|    |    |    |
+
+Layer 3: - Low+Rai+Esc => Toggle Meta
+
+|    |    |    |    |    |    |    |    |    |    |    |    |    |
+|----|----|----|----|----|----|----|----|----|----|----|----|----|
+|Rst |Tog |    |    |    |    |    |F1  |F2  |F3  |F4  |SPS |PS  |
+|Ctrl|M+  |H+  |S+  |V+  |S+  |    |F5  |F6  |F7  |F8  |    |    |
+|Alt |M-  |H-  |S-  |V-  |S-  |    |F9  |F10 |F11 |F12 |    |    |
+|    |    |    |Meta|Low |Sp  |    |Ent |Rai |Shft|    |    |Esc |
 
 ## Features Overview
 
@@ -12,11 +44,9 @@ Matrix controls for a highly ergonomic and customizable experience.
   - Shift + | → ?
   - Shift + Backspace → Delete
 - Win Lock Combo
-  - Press Lower + Raise + Esc to toggle Windows/GUI keys globally (great for
-    gaming).
+  - Press Lower + Raise + Esc to toggle Windows/GUI keys globally (great for gaming).
 - RGB Matrix Controls
-  - Layer 3 provides RGB toggle, speed, hue, saturation, and brightness
-    adjustments.
+  - Layer 3 provides RGB toggle, speed, hue, saturation, and brightness adjustments.
 - Layer Layouts
   - Base: QWERTY
   - Layer 1: Symbols
