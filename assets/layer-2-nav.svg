@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="380" viewBox="0 0 1040 380">
+  <style>
+    .title { font: 24px sans-serif; font-weight: 600; }
+    .subtitle { font: 14px sans-serif; fill: #555; }
+    .key { fill: #f8f9fb; stroke: #c8ccd4; stroke-width: 2; rx: 8; ry: 8; }
+    .ghost { fill: #f0f0f0; stroke: #d0d0d0; stroke-dasharray: 4 4; }
+    .label { font: 14px sans-serif; fill: #1f2933; text-anchor: middle; dominant-baseline: middle; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" />
+  <text x="30" y="36" class="title">Layer 2 - Numbers and Navigation</text>
+  <text x="30" y="58" class="subtitle">CSp = Ctrl+Space (tmux prefix)</text>
+
+  <!-- Left half -->
+  <g transform="translate(40, 80)">
+    <!-- Row 1 -->
+    <rect class="key" x="0" y="0" width="60" height="60" />
+    <text class="label" x="30" y="30">Tab</text>
+
+    <rect class="key" x="70" y="0" width="60" height="60" />
+    <text class="label" x="100" y="30">1</text>
+
+    <rect class="key" x="140" y="0" width="60" height="60" />
+    <text class="label" x="170" y="30">2</text>
+
+    <rect class="key" x="210" y="0" width="60" height="60" />
+    <text class="label" x="240" y="30">3</text>
+
+    <rect class="key" x="280" y="0" width="60" height="60" />
+    <text class="label" x="310" y="30">4</text>
+
+    <rect class="key" x="350" y="0" width="60" height="60" />
+    <text class="label" x="380" y="30">5</text>
+
+    <!-- Row 2 -->
+    <rect class="key" x="0" y="70" width="60" height="60" />
+    <text class="label" x="30" y="100">Ctrl</text>
+
+    <rect class="ghost" x="70" y="70" width="60" height="60" />
+    <text class="label" x="100" y="100">Empty</text>
+
+    <rect class="ghost" x="140" y="70" width="60" height="60" />
+    <text class="label" x="170" y="100">Empty</text>
+
+    <rect class="ghost" x="210" y="70" width="60" height="60" />
+    <text class="label" x="240" y="100">Empty</text>
+
+    <rect class="key" x="280" y="70" width="60" height="60" />
+    <text class="label" x="310" y="100">CSp</text>
+
+    <rect class="ghost" x="350" y="70" width="60" height="60" />
+    <text class="label" x="380" y="100">Empty</text>
+
+    <!-- Row 3 -->
+    <rect class="key" x="0" y="140" width="60" height="60" />
+    <text class="label" x="30" y="170">Alt</text>
+
+    <rect class="ghost" x="70" y="140" width="60" height="60" />
+    <text class="label" x="100" y="170">Empty</text>
+
+    <rect class="ghost" x="140" y="140" width="60" height="60" />
+    <text class="label" x="170" y="170">Empty</text>
+
+    <rect class="ghost" x="210" y="140" width="60" height="60" />
+    <text class="label" x="240" y="170">Empty</text>
+
+    <rect class="ghost" x="280" y="140" width="60" height="60" />
+    <text class="label" x="310" y="170">Empty</text>
+
+    <rect class="ghost" x="350" y="140" width="60" height="60" />
+    <text class="label" x="380" y="170">Empty</text>
+
+    <!-- Thumbs -->
+    <rect class="key" x="80" y="220" width="70" height="60" />
+    <text class="label" x="115" y="250">Meta</text>
+
+    <rect class="key" x="160" y="220" width="70" height="60" />
+    <text class="label" x="195" y="250">RGB</text>
+
+    <rect class="key" x="240" y="220" width="120" height="60" />
+    <text class="label" x="300" y="250">Space</text>
+  </g>
+
+  <!-- Right half -->
+  <g transform="translate(560, 80)">
+    <!-- Row 1 -->
+    <rect class="key" x="0" y="0" width="60" height="60" />
+    <text class="label" x="30" y="30">6</text>
+
+    <rect class="key" x="70" y="0" width="60" height="60" />
+    <text class="label" x="100" y="30">7</text>
+
+    <rect class="key" x="140" y="0" width="60" height="60" />
+    <text class="label" x="170" y="30">8</text>
+
+    <rect class="key" x="210" y="0" width="60" height="60" />
+    <text class="label" x="240" y="30">9</text>
+
+    <rect class="key" x="280" y="0" width="60" height="60" />
+    <text class="label" x="310" y="30">0</text>
+
+    <rect class="ghost" x="350" y="0" width="60" height="60" />
+    <text class="label" x="380" y="30">Empty</text>
+
+    <!-- Row 2 -->
+    <rect class="key" x="0" y="70" width="60" height="60" />
+    <text class="label" x="30" y="100">Left</text>
+
+    <rect class="key" x="70" y="70" width="60" height="60" />
+    <text class="label" x="100" y="100">Down</text>
+
+    <rect class="key" x="140" y="70" width="60" height="60" />
+    <text class="label" x="170" y="100">Up</text>
+
+    <rect class="key" x="210" y="70" width="60" height="60" />
+    <text class="label" x="240" y="100">Right</text>
+
+    <rect class="ghost" x="280" y="70" width="60" height="60" />
+    <text class="label" x="310" y="100">Empty</text>
+
+    <rect class="ghost" x="350" y="70" width="60" height="60" />
+    <text class="label" x="380" y="100">Empty</text>
+
+    <!-- Row 3 -->
+    <rect class="key" x="0" y="140" width="60" height="60" />
+    <text class="label" x="30" y="170">Home</text>
+
+    <rect class="key" x="70" y="140" width="60" height="60" />
+    <text class="label" x="100" y="170">PgDn</text>
+
+    <rect class="key" x="140" y="140" width="60" height="60" />
+    <text class="label" x="170" y="170">PgUp</text>
+
+    <rect class="key" x="210" y="140" width="60" height="60" />
+    <text class="label" x="240" y="170">End</text>
+
+    <rect class="ghost" x="280" y="140" width="60" height="60" />
+    <text class="label" x="310" y="170">Empty</text>
+
+    <rect class="ghost" x="350" y="140" width="60" height="60" />
+    <text class="label" x="380" y="170">Empty</text>
+
+    <!-- Thumbs -->
+    <rect class="key" x="80" y="220" width="120" height="60" />
+    <text class="label" x="140" y="250">Enter</text>
+
+    <rect class="key" x="210" y="220" width="70" height="60" />
+    <text class="label" x="245" y="250">Raise</text>
+
+    <rect class="key" x="290" y="220" width="70" height="60" />
+    <text class="label" x="325" y="250">Shift</text>
+  </g>
+</svg>

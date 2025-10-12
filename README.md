@@ -2,41 +2,22 @@
 
 This repository contains my custom QMK keymap for the Corne (crkbd) split keyboard. It includes advanced features like Key Overrides, Combos, and RGB Matrix controls for a highly ergonomic and customizable experience.
 
-Layer 0: Shift + BS => Delete, Shift + | => ?
+At a glance, the layout keeps QWERTY on the base layer, places punctuation on Lower (`MO(1)`), navigation and numbers on Raise (`MO(2)`), and parks RGB controls on `MO(3)`, while the Meta thumb key remains a GUI toggle. Signature combos include Shift + Backspace sending Delete, Shift + | outputting ?, and the Lower + Raise + Esc chord that locks or unlocks GUI keys for gaming.
 
-|    |    |    |    |    |    |    |    |    |    |    |    |    |
-|----|----|----|----|----|----|----|----|----|----|----|----|----|
-|Tab |Q   |W   |E   |R   |T   |    |Y   |U   |I   |O   |P   |BS D|
-|Ctrl|A   |S   |D   |F   |G   |    |H   |J   |K   |L   |; : |' " |
-|Alt |Z   |X   |C   |V   |B   |    |N   |M   |, < |. > |\| ?|Esc |
-|    |    |    |Meta|Low |Sp  |    |Ent |Rai |Shft|    |    |    |
+![Layer 0 - Base](assets/layer-0-base.svg)
+![Layer 1 - Symbols](assets/layer-1-symbols.svg)
+![Layer 2 - Numbers and Navigation](assets/layer-2-nav.svg)
+![Layer 3 - RGB and Function](assets/layer-3-rgb.svg)
 
-Layer 1
+## Legend
 
-|    |    |    |    |    |    |    |    |    |    |    |    |    |
-|----|----|----|----|----|----|----|----|----|----|----|----|----|
-|*   |!   |@   |#   |$   |%   |    |^   |&   |*   |    |    |    |
-|Ctrl|<   |(   |[   |{   |\\  |    |/   |}   |]   |)   |>   |`   |
-|Alt |    |    |    | 6  | 7  |    |_   |-   |+   |=   |    |~   |
-|    |    |    |Meta|Low |Sp  |    |Ent |Rai |Shft|    |    |    |
-
-Layer 2: CSp => Tmux Prefix Ctrl+Space
-
-|    |    |    |    |    |    |    |    |    |    |    |    |    |
-|----|----|----|----|----|----|----|----|----|----|----|----|----|
-|Tab |1   |2   |3   |4   |5   |    |6   |7   |8   |9   |0   |    |
-|Ctl |    |    |    |CSp |    |    |Lt  |Dn  |Up  |Rt  |    |    |
-|Alt |    |    |    |    |    |    |Hm  |PDn |PUp |End |    |    |
-|    |    |    |Meta|Low |Sp  |    |Ent |Rai |Shft|    |    |    |
-
-Layer 3: - Low+Rai+Esc => Toggle Meta
-
-|    |    |    |    |    |    |    |    |    |    |    |    |    |
-|----|----|----|----|----|----|----|----|----|----|----|----|----|
-|Rst |Tog |    |    |    |    |    |F1  |F2  |F3  |F4  |SPS |PS  |
-|Ctrl|M+  |H+  |S+  |V+  |S+  |    |F5  |F6  |F7  |F8  |    |    |
-|Alt |M-  |H-  |S-  |V-  |S-  |    |F9  |F10 |F11 |F12 |    |    |
-|    |    |    |Meta|Low |Sp  |    |Ent |Rai |Shft|    |    |Esc |
+- **Meta**: Left GUI key (toggled via Lower + Raise + Esc combo)
+- **Lower / Raise**: Momentary layer switches `MO(1)` / `MO(2)`
+- **RGB**: Thumb key that holds `MO(3)` for lighting controls
+- **CSp**: Sends `Ctrl + Space` (tmux prefix)
+- **Shift+Prt**: `S(KC_PSCR)` for full-screen screenshots
+- **RM_* keycodes**: RGB Matrix helpers for mode, hue, saturation, value, and speed adjustments
+- **Empty**: Deliberately transparent slot that falls through to lower layers
 
 ## Features Overview
 
@@ -64,8 +45,16 @@ Layer 3: - Low+Rai+Esc => Toggle Meta
 
 ## Installation & Build
 
-1. Clone QMK Firmware
-1. Clone This Keymap
+### Prerequisites
+
+- Install the QMK CLI and toolchains via `qmk setup` using the [official getting-started guide](https://docs.qmk.fm/#/newbs_getting_started?id=set-up-your-environment).
+- Make sure AVR GCC, `dfu-programmer`, and (if needed) `dfu-util` are on your PATH.
+- Run `qmk doctor` to verify your environment before flashing.
+
+### Quick Start
+
+1. Clone QMK Firmware.
+1. Clone this keymap.
 
 Place this repo under:
 
@@ -73,7 +62,7 @@ Place this repo under:
 <qmk repo root>/keyboards/crkbd/keymaps/freddiehaddad
 ```
 
-## Configure QMK
+### Build & Flash
 
 ```console
 qmk config user.keyboard=crkbd
@@ -81,6 +70,9 @@ qmk config user.keymap=freddiehaddad
 qmk compile --clean
 qmk flash --bootloader dfu
 ```
+
+- Connect each half of the Corne when prompted during flashing.
+- If the board fails to enter bootloader, hold the reset button and rerun the flash command, then check `qmk doctor` for warnings.
 
 > **NOTE**: If initial flash fails:
 >
@@ -95,6 +87,12 @@ qmk flash --bootloader dfu
 ```text
 qmk c2json --keyboard crkbd/rev1 --keymap freddiehaddad --output keymap.json keymap.c
 ```
+
+## Maintaining the Diagrams
+
+- SVG layouts live in `assets/` and mirror each QMK layer.
+- Update the keycaps and labels whenever `keymap.c` changes so the README stays accurate.
+- If you export PNGs or other variants, regenerate them from the SVG source to keep everything in sync.
 
 ## References
 
