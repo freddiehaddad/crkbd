@@ -60,8 +60,8 @@
     <rect class="ghost" x="140" y="140" width="60" height="60" />
     <text class="label" x="170" y="170">Empty</text>
 
-    <rect class="ghost" x="210" y="140" width="60" height="60" />
-    <text class="label" x="240" y="170">Empty</text>
+    <rect class="key" x="210" y="140" width="60" height="60" />
+    <text class="label" x="240" y="170">5</text>
 
     <rect class="key" x="280" y="140" width="60" height="60" />
     <text class="label" x="310" y="170">6</text>
