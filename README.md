@@ -4,10 +4,10 @@ This repository contains my custom QMK keymap for the Corne (crkbd) split keyboa
 
 At a glance, the layout keeps QWERTY on the base layer, places punctuation on Lower (`MO(1)`), navigation and numbers on Raise (`MO(2)`), and parks RGB controls on `MO(3)`, while the Meta thumb key acts as GUI (Windows/Command key). Signature combos include Shift+Backspace sending Delete, Shift+| outputting ?, and the Lower+Raise+Esc chord that toggles the Meta key between GUI and Shift for gaming mode.
 
-![Layer 0 - Base](assets/layer-0-base.svg)
-![Layer 1 - Symbols](assets/layer-1-symbols.svg)
-![Layer 2 - Numbers and Navigation](assets/layer-2-nav.svg)
-![Layer 3 - RGB and Function](assets/layer-3-rgb.svg)
+![Layer 0](assets/layer0.svg)
+![Layer 1](assets/layer1.svg)
+![Layer 2](assets/layer2.svg)
+![Layer 3](assets/layer3.svg)
 
 ## Legend
 
