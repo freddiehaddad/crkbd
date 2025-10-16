@@ -5,10 +5,11 @@
     .key { fill: #f8f9fb; stroke: #c8ccd4; stroke-width: 2; rx: 8; ry: 8; }
     .ghost { fill: #f0f0f0; stroke: #d0d0d0; stroke-dasharray: 4 4; }
     .label { font: 14px sans-serif; fill: #1f2933; text-anchor: middle; dominant-baseline: middle; }
+    .active { fill: #9eacc7; }
   </style>
   <rect width="100%" height="100%" fill="#ffffff" />
   <text x="30" y="36" class="title">Layer 2 - Numbers and Navigation</text>
-  <text x="30" y="58" class="subtitle">CSp = Ctrl+Space (tmux prefix)</text>
+  <text x="30" y="58" class="subtitle">Ctrl+Space = tmux prefix</text>
 
   <!-- Left half -->
   <g transform="translate(40, 80)">
@@ -45,7 +46,8 @@
     <text class="label" x="240" y="100">Empty</text>
 
     <rect class="key" x="280" y="70" width="60" height="60" />
-    <text class="label" x="310" y="100">CSp</text>
+    <text class="label" x="310" y="90">Ctrl</text>
+    <text class="label" x="310" y="110">Space</text>
 
     <rect class="ghost" x="350" y="70" width="60" height="60" />
     <text class="label" x="380" y="100">Empty</text>
@@ -74,7 +76,7 @@
     <text class="label" x="115" y="250">Meta</text>
 
     <rect class="key" x="160" y="220" width="70" height="60" />
-    <text class="label" x="195" y="250">RGB</text>
+    <text class="label" x="195" y="250">Lower</text>
 
     <rect class="key" x="240" y="220" width="120" height="60" />
     <text class="label" x="300" y="250">Space</text>
@@ -143,7 +145,7 @@
     <rect class="key" x="80" y="220" width="120" height="60" />
     <text class="label" x="140" y="250">Enter</text>
 
-    <rect class="key" x="210" y="220" width="70" height="60" />
+    <rect class="key active" x="210" y="220" width="70" height="60" />
     <text class="label" x="245" y="250">Raise</text>
 
     <rect class="key" x="290" y="220" width="70" height="60" />
