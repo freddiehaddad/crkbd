@@ -42,17 +42,17 @@ const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC
 
 
 // =========================
-// Combo: Win/GUI key lock
+// Combo: Meta -> Shift toggle for gaming
 // =========================
 //
-// This combo toggles the OS "GUI" (Windows/Command) keys globally—handy
-// for gaming or avoiding accidental Start/Menu opens.
+// This combo toggles the left thumb Meta (GUI) key to act as Shift instead—
+// handy for gaming so the Windows key doesn't open the Start menu.
 //
 // How combos work:
 // - Combos match **keycodes**, not physical positions.
 // - All keys in the combo must be pressed within COMBO_TERM (default ~50ms;
 //   you can adjust in config.h).
-// - Order of key presses doesn’t matter.
+// - Order of key presses doesn't matter.
 //
 // Here we chord: MO(1) + MO(2) + ESC
 //   MO(1) and MO(2) are momentary layer switches to layers 1 and 2.
@@ -61,20 +61,28 @@ const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC
 // make sure to use those exact LT(...) keycodes here (combos must match
 // the *concrete* keycode you press).
 
+// Custom keycode for the Meta->Shift toggle
+enum custom_keycodes {
+    TOGGLE_META_SHIFT = SAFE_RANGE,
+};
+
+// Track gaming mode state (false = normal Meta, true = Meta becomes Shift)
+static bool gaming_mode = false;
+
 // Store combo sequence in flash (AVR) via PROGMEM; harmless on ARM.
-const uint16_t PROGMEM winlock_combo[] = {
+const uint16_t PROGMEM meta_shift_combo[] = {
     MO(1), MO(2), KC_ESC, COMBO_END,
 };
 
-// Map the combo to the Magic keycode that toggles GUI keys on/off.
+// Map the combo to our custom toggle keycode
 combo_t key_combos[] = {
-    COMBO(winlock_combo, QK_MAGIC_TOGGLE_GUI), // alias: GU_TOGG
+    COMBO(meta_shift_combo, TOGGLE_META_SHIFT),
 };
 
 // TIPs:
 // - If pressing MO(1)+MO(2) changes the layer where ESC becomes transparent,
 //   consider adding `#define COMBO_ONLY_FROM_LAYER _BASE` in config.h so the
-//   combo is evaluated from your base layer’s keycodes.
+//   combo is evaluated from your base layer's keycodes.
 // - If the 3-key chord feels tight, raise COMBO_TERM (e.g., 80–120ms).
 
 // =========================
@@ -142,3 +150,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   )
 };
+
+// =========================
+// Custom keycode handler
+// =========================
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case TOGGLE_META_SHIFT:
+            if (record->event.pressed) {
+                gaming_mode = !gaming_mode;
+            }
+            return false;  // Don't process further
+        
+        case KC_LGUI:
+            // If gaming mode is active, intercept Meta and send Shift instead
+            if (gaming_mode) {
+                if (record->event.pressed) {
+                    register_code(KC_LSFT);
+                } else {
+                    unregister_code(KC_LSFT);
+                }
+                return false;  // Don't process KC_LGUI
+            }
+            break;
+    }
+    return true;  // Process all other keycodes normally
+}
+

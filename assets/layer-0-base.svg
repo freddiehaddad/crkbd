@@ -9,7 +9,7 @@
   <rect width="100%" height="100%" fill="#ffffff" />
   <text x="30" y="36" class="title">Layer 0 - Base (QWERTY)</text>
   <text x="30" y="58" class="subtitle">Thumb keys: Lower = MO(1), Raise = MO(2)</text>
-  <text x="1010" y="58" class="subtitle" text-anchor="end">Overrides: Shift+Backspace = Delete, Shift+| = ?</text>
+  <text x="1010" y="58" class="subtitle" text-anchor="end">Overrides: Shift+Bksp = Delete, Shift+Code = ?</text>
 
   <!-- Left half -->
   <g transform="translate(40, 80)">
@@ -100,7 +100,7 @@
     <text class="label" x="310" y="30">P</text>
 
     <rect class="key" x="350" y="0" width="60" height="60" />
-    <text class="label" x="380" y="30">BKSP</text>
+    <text class="label" x="380" y="30">Bksp</text>
 
     <!-- Row 2 -->
     <rect class="key" x="0" y="70" width="60" height="60" />
@@ -135,7 +135,7 @@
     <text class="label" x="240" y="170">.</text>
 
     <rect class="key" x="280" y="140" width="60" height="60" />
-    <text class="label" x="310" y="170">|</text>
+    <text class="label" x="310" y="170">Code</text>
 
     <rect class="key" x="350" y="140" width="60" height="60" />
     <text class="label" x="380" y="170">Esc</text>
