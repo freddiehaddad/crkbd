@@ -22,3 +22,11 @@ KEY_OVERRIDE_ENABLE = yes
 # Define combos in keymap.c (combo_t key_combos[]).
 # Docs: https://docs.qmk.fm/features/combo
 COMBO_ENABLE = yes
+
+# Debounce Algorithm: controls how key state changes are filtered to prevent
+# switch contact bounce/chatter. sym_defer_pk uses per-key timing (each key
+# gets its own debounce timer) and waits for state to stabilize before
+# reporting changes. More noise-resistant than global debouncing but uses
+# more RAM. Also set DEBOUNCE in config.h to adjust the debounce time (ms).
+# Docs: https://docs.qmk.fm/features/debounce_type
+DEBOUNCE_TYPE = sym_defer_pk
