@@ -25,6 +25,13 @@ The layout keeps QWERTY on the base layer, places punctuation on Lower (`MO(1)`)
   - In gaming mode, the Meta key becomes Shift to preventing Start menu activation and providing addition key binds.
 - RGB Matrix Controls
   - Layer 3 provides RGB toggle, mode, hue, saturation, brightness, speed, and flags adjustments.
+- RGB Matrix Effects
+    - RGB_MATRIX_SOLID_COLOR
+    - RGB_MATRIX_ALPHAS_MODS
+    - RGB_MATRIX_GRADIENT_LEFT_RIGHT
+    - RGB_MATRIX_CYCLE_SPIRAL
+    - RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
+
 - Layer Layouts
   - Base: QWERTY
   - Layer 1: Symbols
