@@ -21,11 +21,11 @@
     <text class="label" x="100" y="20">RGB</text>
     <text class="label" x="100" y="40">Toggle</text>
 
-    <rect class="ghost" x="140" y="0" width="60" height="60" />
-    <text class="label" x="170" y="30">Empty</text>
+    <rect class="key" x="140" y="0" width="60" height="60" />
+    <text class="label" x="170" y="30">Mode+</text>
 
-    <rect class="ghost" x="210" y="0" width="60" height="60" />
-    <text class="label" x="240" y="30">Empty</text>
+    <rect class="key" x="210" y="0" width="60" height="60" />
+    <text class="label" x="240" y="30">Mode-</text>
 
     <rect class="ghost" x="280" y="0" width="60" height="60" />
     <text class="label" x="310" y="30">Empty</text>
@@ -35,7 +35,7 @@
 
     <!-- Row 2 -->
     <rect class="key" x="0" y="70" width="60" height="60" />
-    <text class="label" x="30" y="100">Mode+</text>
+    <text class="label" x="30" y="100">Ctrl</text>
 
     <rect class="key" x="70" y="70" width="60" height="60" />
     <text class="label" x="100" y="100">Hue+</text>
@@ -54,7 +54,7 @@
 
     <!-- Row 3 -->
     <rect class="key" x="0" y="140" width="60" height="60" />
-    <text class="label" x="30" y="170">Mode-</text>
+    <text class="label" x="30" y="170">Alt</text>
 
     <rect class="key" x="70" y="140" width="60" height="60" />
     <text class="label" x="100" y="170">Hue-</text>

@@ -140,11 +140,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      QK_BOOT, RM_TOGG, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        KC_F1,   KC_F2,   KC_F3,   KC_F4, S(KC_PSCR), KC_PSCR,
+      QK_BOOT, RM_TOGG, RM_NEXT, RM_PREV, XXXXXXX, XXXXXXX,                        KC_F1,   KC_F2,   KC_F3,   KC_F4, S(KC_PSCR), KC_PSCR,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RM_NEXT, RM_HUEU, RM_SATU, RM_VALU, RM_SPDU, RM_FLGN,                        KC_F5,   KC_F6,   KC_F7,   KC_F8, XXXXXXX, XXXXXXX,
+      KC_LCTL, RM_HUEU, RM_SATU, RM_VALU, RM_SPDU, RM_FLGN,                        KC_F5,   KC_F6,   KC_F7,   KC_F8, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RM_PREV, RM_HUED, RM_SATD, RM_VALD, RM_SPDD, RM_FLGP,                        KC_F9,  KC_F10,  KC_F11,  KC_F12, XXXXXXX,  KC_ESC,
+      KC_LALT, RM_HUED, RM_SATD, RM_VALD, RM_SPDD, RM_FLGP,                        KC_F9,  KC_F10,  KC_F11,  KC_F12, XXXXXXX,  KC_ESC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_LSFT
                                       //`--------------------------'  `--------------------------'
