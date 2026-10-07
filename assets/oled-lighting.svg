@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="380" viewBox="0 0 1040 380" role="img" aria-labelledby="title description">
+  <title id="title">Blackbox lighting controls and live gauges</title>
+  <desc id="description">The left display keeps the System layer key legends visible, with Hue Up and the Symbols thumb key highlighted in this example. The right display shows lighting enabled, effect 003, LED selection 255, hue 128, saturation 200, brightness 120, and pace 090, with a bar for each value. These are illustrative values rather than a live reading.</desc>
+  <style>
+    .title { font-family: sans-serif; font-size: 24px; font-weight: 600; }
+    .subtitle { font-family: sans-serif; font-size: 14px; fill: #555; }
+    .panel { fill: #ffffff; stroke: #c8ccd4; stroke-width: 2; }
+    .key { fill: #f8f9fb; stroke: #c8ccd4; stroke-width: 2; }
+    .ghost { fill: #f0f0f0; stroke: #d0d0d0; stroke-dasharray: 4 4; }
+    .label { font-family: sans-serif; font-size: 14px; fill: #1f2933; text-anchor: middle; dominant-baseline: middle; }
+    .screen { font-family: sans-serif; font-size: 18px; fill: #1f2933; dominant-baseline: middle; }
+    .active { fill: #9eacc7; }
+    .track { fill: #ffffff; stroke: #c8ccd4; stroke-width: 2; }
+    .footer { font-family: sans-serif; font-size: 12px; fill: #666; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" />
+  <text x="30" y="36" class="title">Blackbox - Lighting Controls</text>
+  <text x="30" y="58" class="subtitle">System layer - keep the controls in view while adjusting live lighting values</text>
+  <text x="40" y="94" class="subtitle">LEFT DISPLAY / KEY MAP</text>
+  <text x="560" y="94" class="subtitle">RIGHT DISPLAY / LIVE GAUGES</text>
+
+  <g transform="translate(40, 110)">
+    <rect width="440" height="214" rx="8" class="panel" />
+
+    <rect x="15" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="45" y="35" class="label">RST</text>
+    <rect x="85" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="115" y="35" class="label">RGB</text>
+    <rect x="155" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="185" y="35" class="label">FX+</text>
+    <rect x="225" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="255" y="35" class="label">FX-</text>
+    <rect x="295" y="14" width="60" height="42" rx="8" class="key ghost" />
+    <text x="325" y="35" class="label">---</text>
+    <rect x="365" y="14" width="60" height="42" rx="8" class="key ghost" />
+    <text x="395" y="35" class="label">---</text>
+
+    <rect x="15" y="64" width="60" height="42" rx="8" class="key" />
+    <text x="45" y="85" class="label">CTL</text>
+    <rect x="85" y="64" width="60" height="42" rx="8" class="key active" />
+    <text x="115" y="85" class="label">H+</text>
+    <rect x="155" y="64" width="60" height="42" rx="8" class="key" />
+    <text x="185" y="85" class="label">S+</text>
+    <rect x="225" y="64" width="60" height="42" rx="8" class="key" />
+    <text x="255" y="85" class="label">V+</text>
+    <rect x="295" y="64" width="60" height="42" rx="8" class="key" />
+    <text x="325" y="85" class="label">P+</text>
+    <rect x="365" y="64" width="60" height="42" rx="8" class="key" />
+    <text x="395" y="85" class="label">F+</text>
+
+    <rect x="15" y="114" width="60" height="42" rx="8" class="key" />
+    <text x="45" y="135" class="label">ALT</text>
+    <rect x="85" y="114" width="60" height="42" rx="8" class="key" />
+    <text x="115" y="135" class="label">H-</text>
+    <rect x="155" y="114" width="60" height="42" rx="8" class="key" />
+    <text x="185" y="135" class="label">S-</text>
+    <rect x="225" y="114" width="60" height="42" rx="8" class="key" />
+    <text x="255" y="135" class="label">V-</text>
+    <rect x="295" y="114" width="60" height="42" rx="8" class="key" />
+    <text x="325" y="135" class="label">P-</text>
+    <rect x="365" y="114" width="60" height="42" rx="8" class="key" />
+    <text x="395" y="135" class="label">F-</text>
+
+    <rect x="15" y="170" width="50" height="30" rx="8" class="key active" />
+    <text x="40" y="185" class="label">SYS</text>
+    <text x="85" y="185" class="label">L</text>
+    <rect x="175" y="170" width="70" height="30" rx="8" class="key" />
+    <text x="210" y="185" class="label">GUI</text>
+    <rect x="255" y="170" width="70" height="30" rx="8" class="key active" />
+    <text x="290" y="185" class="label">SYM</text>
+    <rect x="335" y="170" width="90" height="30" rx="8" class="key" />
+    <text x="380" y="185" class="label">SPC</text>
+  </g>
+
+  <rect x="560" y="110" width="440" height="214" rx="8" class="key" />
+  <rect x="578" y="124" width="92" height="28" rx="5" class="active" />
+  <text x="589" y="138" class="screen">RGB ON</text>
+  <text x="723" y="138" class="screen">FX 003</text>
+  <text x="899" y="138" class="screen">F 255</text>
+
+  <text x="580" y="184" class="screen">H</text>
+  <text x="606" y="184" class="screen">128</text>
+  <rect x="651" y="176" width="110" height="16" rx="4" class="track" />
+  <rect x="654" y="179" width="52" height="10" rx="2" class="active" />
+
+  <text x="796" y="184" class="screen">S</text>
+  <text x="822" y="184" class="screen">200</text>
+  <rect x="867" y="176" width="110" height="16" rx="4" class="track" />
+  <rect x="870" y="179" width="82" height="10" rx="2" class="active" />
+
+  <text x="580" y="238" class="screen">V</text>
+  <text x="606" y="238" class="screen">120</text>
+  <rect x="651" y="230" width="110" height="16" rx="4" class="track" />
+  <rect x="654" y="233" width="49" height="10" rx="2" class="active" />
+
+  <text x="796" y="238" class="screen">P</text>
+  <text x="822" y="238" class="screen">090</text>
+  <rect x="867" y="230" width="110" height="16" rx="4" class="track" />
+  <rect x="870" y="233" width="37" height="10" rx="2" class="active" />
+
+  <text x="580" y="295" class="screen">HUE SAT VAL PACE</text>
+  <text x="40" y="350" class="footer">Example: Hue Up is pressed while the System layer is held.</text>
+  <text x="40" y="370" class="footer">The left-hand key legends remain visible during adjustments.</text>
+  <text x="560" y="350" class="footer">H: hue / S: saturation / V: brightness / P: animation pace</text>
+  <text x="560" y="370" class="footer">The gauges remain for 2.5 seconds after the last lighting adjustment.</text>
+</svg>

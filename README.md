@@ -47,6 +47,51 @@ The layout keeps QWERTY on the base layer, places punctuation on Lower (`MO(1)`)
 | 2     | Numbers + Navigation  |
 | 3     | RGB Matrix + Function |
 
+## Blackbox OLED Cockpit
+
+The screens switch between a typing dashboard, live key maps, and lighting
+controls. The illustrations show the current landscape display contents,
+expanded for readability. Blue-gray marks highlighted items; the OLEDs
+themselves are monochrome.
+
+### While Typing
+
+![Blackbox dashboard: status and highlighted modifiers on the left, WPM, reactor, and typing history on the right](assets/oled-dashboard.svg)
+
+The **left screen** highlights active Caps/Num/Scroll Lock indicators and held modifiers. `META:GUI` shows what the left thumb Meta key currently does; `LINK: OK` means the two halves are communicating.
+
+The **right screen** shows estimated words per minute, an animated reactor that responds to typing speed, and a scrolling graph of the last 22 seconds. The graph tops out at 160 WPM; the number can go higher.
+
+### While Holding a Layer Key
+
+Both screens become cheat sheets for their own half of the keyboard. The top three lines follow the three physical rows, left to right. The bottom line identifies the layer and side, followed by the three thumb keys. Held keys are highlighted.
+
+For example, holding the **Numbers + Navigation** layer shows:
+
+![Blackbox layer maps: per-half Numbers and Navigation legends with the held NAV thumb key highlighted](assets/oled-layer-map.svg)
+
+`SYM` is Symbols, `NAV` is Numbers + Navigation, and `SYS` is Lighting + Function keys. `TMX` is the tmux prefix, `ENT` is Enter, `SPC` is Space, and `SFT` is Shift. On the System layer, `SNP` is Shift+Print Screen, `PRT` is Print Screen, and `RST` enters the bootloader. Unassigned keys show `---`.
+
+Release the layer key to return to the dashboard.
+
+### Gaming Mode
+
+The dashboard changes from **READY** to a highlighted **ARMED**, and the left screen reads `META:SHIFT`. The reactor gains side markers. In the layer maps, a highlighted `G` appears beside the side indicator and the Meta thumb key is labeled `SFT` instead of `GUI`.
+
+### While Adjusting Lighting
+
+The right screen briefly switches to live values and gauges:
+
+![Blackbox lighting view: System-layer controls on the left and live hue, saturation, brightness, and pace gauges on the right](assets/oled-lighting.svg)
+
+`H` is hue, `S` is saturation, `V` is brightness, and `P` is animation pace. The header shows whether lighting is on, the current effect (`FX`), and the LED selection (`F`). Gaming mode also adds a highlighted `ARM`.
+
+The left screen keeps its key map visible while the System layer is held. After 2.5 seconds without another lighting adjustment, the right screen returns to its key map or dashboard.
+
+### When Idle
+
+After 60 seconds without input, both screens dim, collapse toward the center, and go dark together. Pressing or releasing a key wakes them; holding a key keeps them awake.
+
 ## Installation & Build
 
 ### Prerequisites
@@ -96,8 +141,8 @@ qmk c2json --keyboard crkbd/rev1 --keymap freddiehaddad --output keymap.json key
 
 ## Maintaining the Diagrams
 
-- SVG layouts live in `assets/` and mirror each QMK layer.
-- Update the keycaps and labels whenever `keymap.c` changes so the README stays accurate.
+- Layer and OLED illustrations live in `assets/`.
+- Keep the layer keycaps and OLED legends aligned with `keymap.c`, and the display illustrations aligned with `blackbox.c`.
 - If you export PNGs or other variants, regenerate them from the SVG source to keep everything in sync.
 
 ## References

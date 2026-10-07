@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="380" viewBox="0 0 1040 380" role="img" aria-labelledby="title description">
+  <title id="title">Blackbox live Numbers and Navigation layer map</title>
+  <desc id="description">Each display shows three rows of six key legends and a footer with the layer, side, and thumb keys. The left half contains Tab, numbers one through five, Ctrl, Alt, and the tmux prefix. The right half contains numbers six through zero, arrows, Home, Page Down, Page Up, and End. The right NAV thumb is highlighted because the layer key is held. Dashed cells are unassigned.</desc>
+  <style>
+    .title { font-family: sans-serif; font-size: 24px; font-weight: 600; }
+    .subtitle { font-family: sans-serif; font-size: 14px; fill: #555; }
+    .panel { fill: #ffffff; stroke: #c8ccd4; stroke-width: 2; }
+    .key { fill: #f8f9fb; stroke: #c8ccd4; stroke-width: 2; }
+    .ghost { fill: #f0f0f0; stroke: #d0d0d0; stroke-dasharray: 4 4; }
+    .label { font-family: sans-serif; font-size: 14px; fill: #1f2933; text-anchor: middle; dominant-baseline: middle; }
+    .active { fill: #9eacc7; }
+    .footer { font-family: sans-serif; font-size: 12px; fill: #666; }
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff" />
+  <text x="30" y="36" class="title">Blackbox - Live Layer Map</text>
+  <text x="30" y="58" class="subtitle">Numbers + Navigation held - each screen shows the bindings on its own half</text>
+  <text x="40" y="94" class="subtitle">LEFT DISPLAY</text>
+  <text x="560" y="94" class="subtitle">RIGHT DISPLAY</text>
+
+  <g transform="translate(40, 110)">
+    <rect width="440" height="214" rx="8" class="panel" />
+
+    <rect x="15" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="45" y="35" class="label">TAB</text>
+    <rect x="85" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="115" y="35" class="label">1</text>
+    <rect x="155" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="185" y="35" class="label">2</text>
+    <rect x="225" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="255" y="35" class="label">3</text>
+    <rect x="295" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="325" y="35" class="label">4</text>
+    <rect x="365" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="395" y="35" class="label">5</text>
+
+    <rect x="15" y="64" width="60" height="42" rx="8" class="key" />
+    <text x="45" y="85" class="label">CTL</text>
+    <rect x="85" y="64" width="60" height="42" rx="8" class="key ghost" />
+    <text x="115" y="85" class="label">---</text>
+    <rect x="155" y="64" width="60" height="42" rx="8" class="key ghost" />
+    <text x="185" y="85" class="label">---</text>
+    <rect x="225" y="64" width="60" height="42" rx="8" class="key ghost" />
+    <text x="255" y="85" class="label">---</text>
+    <rect x="295" y="64" width="60" height="42" rx="8" class="key" />
+    <text x="325" y="85" class="label">TMX</text>
+    <rect x="365" y="64" width="60" height="42" rx="8" class="key ghost" />
+    <text x="395" y="85" class="label">---</text>
+
+    <rect x="15" y="114" width="60" height="42" rx="8" class="key" />
+    <text x="45" y="135" class="label">ALT</text>
+    <rect x="85" y="114" width="60" height="42" rx="8" class="key ghost" />
+    <text x="115" y="135" class="label">---</text>
+    <rect x="155" y="114" width="60" height="42" rx="8" class="key ghost" />
+    <text x="185" y="135" class="label">---</text>
+    <rect x="225" y="114" width="60" height="42" rx="8" class="key ghost" />
+    <text x="255" y="135" class="label">---</text>
+    <rect x="295" y="114" width="60" height="42" rx="8" class="key ghost" />
+    <text x="325" y="135" class="label">---</text>
+    <rect x="365" y="114" width="60" height="42" rx="8" class="key ghost" />
+    <text x="395" y="135" class="label">---</text>
+
+    <rect x="15" y="170" width="50" height="30" rx="8" class="key active" />
+    <text x="40" y="185" class="label">NAV</text>
+    <text x="85" y="185" class="label">L</text>
+    <rect x="175" y="170" width="70" height="30" rx="8" class="key" />
+    <text x="210" y="185" class="label">GUI</text>
+    <rect x="255" y="170" width="70" height="30" rx="8" class="key" />
+    <text x="290" y="185" class="label">SYS</text>
+    <rect x="335" y="170" width="90" height="30" rx="8" class="key" />
+    <text x="380" y="185" class="label">SPC</text>
+  </g>
+
+  <g transform="translate(560, 110)">
+    <rect width="440" height="214" rx="8" class="panel" />
+
+    <rect x="15" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="45" y="35" class="label">6</text>
+    <rect x="85" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="115" y="35" class="label">7</text>
+    <rect x="155" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="185" y="35" class="label">8</text>
+    <rect x="225" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="255" y="35" class="label">9</text>
+    <rect x="295" y="14" width="60" height="42" rx="8" class="key" />
+    <text x="325" y="35" class="label">0</text>
+    <rect x="365" y="14" width="60" height="42" rx="8" class="key ghost" />
+    <text x="395" y="35" class="label">---</text>
+
+    <rect x="15" y="64" width="60" height="42" rx="8" class="key" />
+    <text x="45" y="85" class="label">&lt;-</text>
+    <rect x="85" y="64" width="60" height="42" rx="8" class="key" />
+    <text x="115" y="85" class="label">DN</text>
+    <rect x="155" y="64" width="60" height="42" rx="8" class="key" />
+    <text x="185" y="85" class="label">UP</text>
+    <rect x="225" y="64" width="60" height="42" rx="8" class="key" />
+    <text x="255" y="85" class="label">-&gt;</text>
+    <rect x="295" y="64" width="60" height="42" rx="8" class="key ghost" />
+    <text x="325" y="85" class="label">---</text>
+    <rect x="365" y="64" width="60" height="42" rx="8" class="key ghost" />
+    <text x="395" y="85" class="label">---</text>
+
+    <rect x="15" y="114" width="60" height="42" rx="8" class="key" />
+    <text x="45" y="135" class="label">HOM</text>
+    <rect x="85" y="114" width="60" height="42" rx="8" class="key" />
+    <text x="115" y="135" class="label">PGD</text>
+    <rect x="155" y="114" width="60" height="42" rx="8" class="key" />
+    <text x="185" y="135" class="label">PGU</text>
+    <rect x="225" y="114" width="60" height="42" rx="8" class="key" />
+    <text x="255" y="135" class="label">END</text>
+    <rect x="295" y="114" width="60" height="42" rx="8" class="key ghost" />
+    <text x="325" y="135" class="label">---</text>
+    <rect x="365" y="114" width="60" height="42" rx="8" class="key ghost" />
+    <text x="395" y="135" class="label">---</text>
+
+    <rect x="15" y="170" width="50" height="30" rx="8" class="key active" />
+    <text x="40" y="185" class="label">NAV</text>
+    <text x="85" y="185" class="label">R</text>
+    <rect x="175" y="170" width="70" height="30" rx="8" class="key" />
+    <text x="210" y="185" class="label">ENT</text>
+    <rect x="255" y="170" width="70" height="30" rx="8" class="key active" />
+    <text x="290" y="185" class="label">NAV</text>
+    <rect x="335" y="170" width="90" height="30" rx="8" class="key" />
+    <text x="380" y="185" class="label">SFT</text>
+  </g>
+
+  <text x="40" y="350" class="footer">Each row follows the physical keys from left to right.</text>
+  <text x="40" y="370" class="footer">Footer: layer, side, then the three thumb keys.</text>
+  <text x="560" y="350" class="footer">The NAV thumb key is highlighted while held.</text>
+  <text x="560" y="370" class="footer">Dashed cells are unassigned; their OLED label is "---".</text>
+</svg>

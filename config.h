@@ -1,5 +1,16 @@
 #pragma once
 
+#ifdef OLED_ENABLE
+    #define OLED_FONT_H "oled_font.c"
+    #define OLED_FONT_START 32
+    #define OLED_FONT_END 126
+    #define OLED_BRIGHTNESS 96
+    // Blackbox handles input-driven sleep, including the shutdown animation.
+    #define OLED_TIMEOUT 0
+    #define SPLIT_TRANSPORT_MIRROR
+    #define SPLIT_TRANSACTION_IDS_USER BLACKBOX_SYNC
+#endif
+
 // Debounce time in milliseconds. Determines how long to wait for switch
 // contacts to settle after detecting a state change. Default is 5ms.
 // Increase this value if experiencing key chatter (duplicate keypresses).

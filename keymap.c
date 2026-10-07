@@ -11,6 +11,7 @@
 // -----------------------------------------------------------------------------
 
 #include QMK_KEYBOARD_H
+#include "blackbox.h"
 
 // =========================
 // Key Overrides
@@ -156,10 +157,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // =========================
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (record->event.pressed) {
+        blackbox_note_key(keycode);
+    }
+
     switch (keycode) {
         case TOGGLE_META_SHIFT:
             if (record->event.pressed) {
                 gaming_mode = !gaming_mode;
+                blackbox_set_gaming_mode(gaming_mode);
             }
             return false;  // Don't process further
 
@@ -177,4 +183,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;  // Process all other keycodes normally
 }
-

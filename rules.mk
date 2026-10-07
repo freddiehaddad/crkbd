@@ -23,6 +23,10 @@ KEY_OVERRIDE_ENABLE = yes
 # Docs: https://docs.qmk.fm/features/combo
 COMBO_ENABLE = yes
 
+# Blackbox OLED cockpit and typing telemetry.
+WPM_ENABLE = yes
+SRC += blackbox.c
+
 # Debounce Algorithm: controls how key state changes are filtered to prevent
 # switch contact bounce/chatter. sym_defer_pk uses per-key timing (each key
 # gets its own debounce timer) and waits for state to stabilize before
