@@ -75,6 +75,8 @@ qmk compile --clean
 qmk flash
 ```
 
+> **NOTE**: Specify the bootloader (i.e. `--bootloader dfu`) if automatic detection fails. 
+
 - Connect each half of the Corne when prompted during flashing.
 - If the board fails to enter bootloader, hold the reset button and rerun the flash command, then check `qmk doctor` for warnings.
 
