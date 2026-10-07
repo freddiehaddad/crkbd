@@ -28,5 +28,5 @@ COMBO_ENABLE = yes
 # gets its own debounce timer) and waits for state to stabilize before
 # reporting changes. More noise-resistant than global debouncing but uses
 # more RAM. Also set DEBOUNCE in config.h to adjust the debounce time (ms).
-# Docs: https://docs.qmk.fm/features/debounce_type
-DEBOUNCE_TYPE = sym_defer_pk
+# Docs: https://docs.qmk.fm/feature_debounce_type#debounce-method
+# DEBOUNCE_TYPE = sym_defer_pk
