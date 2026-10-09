@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1040" height="380" viewBox="0 0 1040 380" role="img" aria-labelledby="title description">
-  <title id="title">Blackbox live Numbers and Navigation layer map</title>
-  <desc id="description">Each display shows three rows of six key legends and a footer with the layer, side, and thumb keys. The left half contains Tab, numbers one through five, Ctrl, Alt, and the tmux prefix. The right half contains numbers six through zero, arrows, Home, Page Down, Page Up, and End. The right NAV thumb is highlighted because the layer key is held. Dashed cells are unassigned.</desc>
+  <title id="title">Blackbox Numbers and Navigation key maps</title>
+  <desc id="description">Each screen shows three rows of six keys and a bottom row with the layer, side, and thumb keys. The left half has Tab, numbers one through five, Ctrl, Alt, and the tmux prefix. The right half has numbers six through zero, arrows, Home, Page Down, Page Up, and End. The right NAV thumb key is highlighted while held. Dashed boxes have no assigned key.</desc>
   <style>
     .title { font-family: sans-serif; font-size: 24px; font-weight: 600; }
     .subtitle { font-family: sans-serif; font-size: 14px; fill: #555; }
@@ -12,10 +12,10 @@
     .footer { font-family: sans-serif; font-size: 12px; fill: #666; }
   </style>
   <rect width="100%" height="100%" fill="#ffffff" />
-  <text x="30" y="36" class="title">Blackbox - Live Layer Map</text>
-  <text x="30" y="58" class="subtitle">Numbers + Navigation held - each screen shows the bindings on its own half</text>
-  <text x="40" y="94" class="subtitle">LEFT DISPLAY</text>
-  <text x="560" y="94" class="subtitle">RIGHT DISPLAY</text>
+  <text x="30" y="36" class="title">Blackbox - Layer Maps</text>
+  <text x="30" y="58" class="subtitle">Hold Raise to see the Numbers + Navigation keys on each half</text>
+  <text x="40" y="94" class="subtitle">LEFT SCREEN</text>
+  <text x="560" y="94" class="subtitle">RIGHT SCREEN</text>
 
   <g transform="translate(40, 110)">
     <rect width="440" height="214" rx="8" class="panel" />
@@ -123,8 +123,8 @@
     <text x="380" y="185" class="label">SFT</text>
   </g>
 
-  <text x="40" y="350" class="footer">Each row follows the physical keys from left to right.</text>
-  <text x="40" y="370" class="footer">Footer: layer, side, then the three thumb keys.</text>
-  <text x="560" y="350" class="footer">The NAV thumb key is highlighted while held.</text>
-  <text x="560" y="370" class="footer">Dashed cells are unassigned; their OLED label is "---".</text>
+  <text x="40" y="350" class="footer">Rows match the keyboard, from left to right.</text>
+  <text x="40" y="370" class="footer">Bottom row: layer, side, then the three thumb keys.</text>
+  <text x="560" y="350" class="footer">Held keys are highlighted.</text>
+  <text x="560" y="370" class="footer">Dashed boxes have no assigned key and show "---".</text>
 </svg>

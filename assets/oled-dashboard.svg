@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1040" height="330" viewBox="0 0 1040 330" role="img" aria-labelledby="title description">
-  <title id="title">Blackbox typing dashboard</title>
-  <desc id="description">The left display shows READY, the base layer, lock indicators, modifiers, the Meta mapping, and link status. Caps Lock and Ctrl are highlighted in this example. The right display shows 80 WPM, an animated reactor represented by a still image, and 22 seconds of typing history.</desc>
+  <title id="title">Blackbox typing view</title>
+  <desc id="description">The left screen shows READY, the base layer, lock status, held modifiers, the Meta key's function, and connection status. Caps Lock and Ctrl are active in this example. The right screen shows 80 words per minute, a still frame of the typing animation, and a graph of the last 22 seconds.</desc>
   <style>
     .title { font-family: sans-serif; font-size: 24px; font-weight: 600; }
     .subtitle { font-family: sans-serif; font-size: 14px; fill: #555; }
@@ -12,10 +12,10 @@
     .footer { font-family: sans-serif; font-size: 12px; fill: #666; }
   </style>
   <rect width="100%" height="100%" fill="#ffffff" />
-  <text x="30" y="36" class="title">Blackbox - Typing Dashboard</text>
-  <text x="30" y="58" class="subtitle">Base layer - keyboard status on the left, live typing activity on the right</text>
+  <text x="30" y="36" class="title">Blackbox - Typing View</text>
+  <text x="30" y="58" class="subtitle">Keyboard status on the left, typing speed on the right</text>
 
-  <text x="40" y="94" class="subtitle">LEFT DISPLAY / STATUS</text>
+  <text x="40" y="94" class="subtitle">LEFT SCREEN / STATUS</text>
   <rect x="40" y="112" width="440" height="142" rx="8" class="panel" />
   <text x="58" y="140" class="screen">BLACKBOX // READY</text>
 
@@ -33,10 +33,10 @@
 
   <text x="58" y="230" class="screen">META:GUI</text>
   <text x="319" y="230" class="screen">LINK: OK</text>
-  <text x="40" y="283" class="subtitle">Locks and held modifiers highlight when active.</text>
-  <text x="40" y="305" class="footer">Example: Caps Lock and Ctrl are active; the Meta key still acts as GUI.</text>
+  <text x="40" y="283" class="subtitle">Active locks and held modifier keys are highlighted.</text>
+  <text x="40" y="305" class="footer">Example: Caps Lock and Ctrl are active; Meta is Windows/Command.</text>
 
-  <text x="560" y="94" class="subtitle">RIGHT DISPLAY / TELEMETRY</text>
+  <text x="560" y="94" class="subtitle">RIGHT SCREEN / TYPING SPEED</text>
   <rect x="560" y="112" width="440" height="142" rx="8" class="panel" />
   <text x="578" y="140" class="screen">CORE</text>
   <text x="704" y="140" class="screen">WPM:080</text>
@@ -53,6 +53,6 @@
   <path d="M710 238 H979" fill="none" stroke="#c8ccd4" stroke-width="2" />
   <path d="M714 237 v-5 M720 237 v-7 M726 237 v-6 M732 237 v-9 M738 237 v-12 M744 237 v-17 M750 237 v-15 M756 237 v-19 M762 237 v-24 M768 237 v-20 M774 237 v-18 M780 237 v-23 M786 237 v-28 M792 237 v-31 M798 237 v-27 M804 237 v-30 M810 237 v-35 M816 237 v-33 M822 237 v-29 M828 237 v-26 M834 237 v-20 M840 237 v-15 M846 237 v-12 M852 237 v-16 M858 237 v-20 M864 237 v-24 M870 237 v-27 M876 237 v-25 M882 237 v-30 M888 237 v-33 M894 237 v-36 M900 237 v-32 M906 237 v-29 M912 237 v-25 M918 237 v-22 M924 237 v-19 M930 237 v-24 M936 237 v-28 M942 237 v-30 M948 237 v-27 M954 237 v-24 M960 237 v-21 M966 237 v-22 M972 237 v-23" fill="none" stroke="#1f2933" stroke-width="4" />
 
-  <text x="560" y="283" class="subtitle">The reactor responds to your typing pace.</text>
-  <text x="560" y="305" class="footer">History: 22 seconds, with a 160 WPM graph ceiling.</text>
+  <text x="560" y="283" class="subtitle">The animation reacts to how fast you type.</text>
+  <text x="560" y="305" class="footer">The graph shows 22 seconds of typing, up to 160 WPM.</text>
 </svg>
